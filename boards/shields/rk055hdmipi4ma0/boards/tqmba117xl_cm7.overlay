@@ -1,0 +1,32 @@
+/*
+ * Copyright (c) 2025 TQ-Systems GmbH <license@tq-group.com>, D-82229 Seefeld, Germany.
+ * Author: Isaac L. L. Yuki
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/{
+};
+
+&nxp_mipi_connector{
+	compatible = "gpio-nexus";
+	#gpio-cells = <2>;
+	gpio-map-mask = <0xffffffff 0xffffffc0>;
+	gpio-map-pass-thru = <0 0x3f>;
+	/*
+	 * Mapping of the port expander/gpio controller pins to the virtual controller.
+	 * virtual controller -> port expander, gpio controller
+	 */
+	gpio-map = <29 0 &gpio4 23 0>,	/* INPUT_IRQ */
+			<21 0 &pca95xx 10 0>,	/* LCD RESET# */
+			<32 0 &pca95xx 11 0>,	/* PWR_EN */
+			<28 0 &pca95xx 12 0>;	/* CTP RESET# */
+};
+
+&zephyr_lcdif {
+	backlight-gpios = <&nxp_mipi_connector 32 GPIO_ACTIVE_HIGH>;
+};
+
+&zephyr_mipi_dsi {
+	phy-clock = <792000000>;
+};
