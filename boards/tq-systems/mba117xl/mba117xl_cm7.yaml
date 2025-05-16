@@ -1,0 +1,24 @@
+identifier: mba117xl/mimxrt1176/cm7
+name: MBA117XL CM7
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+ram: 256
+flash: 16384
+supported:
+  - display
+  - dma
+  - gpio
+  - hwinfo
+  - i2c
+  - mipi_dsi
+  - netif:eth
+  - pwm
+  - spi
+  - usb_device
+  - watchdog
+  - usbd
+vendor: tq-systems
