@@ -1,0 +1,9 @@
+# Copyright (c) 2025 TQ-Systems GmbH <license@tq-group.com>, D-82229 Seefeld, Germany.
+# Author: Isaac L. L. Yuki
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+config BOARD_TQMBA117XL
+	select SOC_PART_NUMBER_MIMXRT1176DVMAA
+	select SOC_MIMXRT1176_CM7
