@@ -129,7 +129,7 @@ Only the Cortex-M7 core is enabled at present.
      - Unique device serial number 
    * - DISPLAY
      - on-chip
-     - eLCDIF / MIPI-DSI, tested with ``rk055hdmipi4m``,
+     - eLCDIF / MIPI-DSI, tested with
        ``rk055hdmipi4ma0``, ``mba117xl_tm070`` shields 
    * - FLEXSPI
      - on-chip
