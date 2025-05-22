@@ -105,7 +105,7 @@ Only the Cortex-M7 core is enabled at present.
      - ``i2c``
    * - PWM
      - on-chip
-     - ``pwm``
+     - ``for display usage``
    * - UART
      - on-chip
      - Serial (polling / interrupt / async)

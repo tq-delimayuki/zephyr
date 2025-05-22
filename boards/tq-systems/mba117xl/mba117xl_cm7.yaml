@@ -16,7 +16,6 @@ supported:
   - i2c
   - mipi_dsi
   - netif:eth
-  - pwm
   - spi
   - usb_device
   - watchdog
