@@ -224,3 +224,13 @@ zephyr,random-mac-address;
 	pinctrl-0 = <&pinmux_enet1g_ptp>;
 	pinctrl-names = "default";
 };
+
+&flexcan2 {
+	pinctrl-0 = <&pinmux_flexcan2>;
+	pinctrl-names = "default";
+};
+
+&flexcan3 {
+	pinctrl-0 = <&pinmux_flexcan3>;
+	pinctrl-names = "default";
+};

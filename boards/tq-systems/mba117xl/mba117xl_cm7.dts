@@ -31,6 +31,7 @@
 		zephyr,cpu1-region = &ocram;
 		zephyr,code-partition = &slot0_partition;
 		zephyr,ipc = &mailbox_a;
+		zephyr,canbus = &flexcan3;
 	};
 	sdram0: memory@80000000 {
 		/* Winbond W9825G6KH-5I */
@@ -84,6 +85,14 @@
 &pit2 {
 	status = "okay";
 };
+
+&flexcan3 {
+	status = "okay";
+	can-transceiver {
+		max-bitrate = <5000000>;
+	};
+};
+
 
 zephyr_udc0: &usb1 {
 	status = "okay";
