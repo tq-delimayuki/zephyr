@@ -1,13 +1,9 @@
-//*****************************************************************************
 /*!
- * \copyright
- * SPDX-License-Identifier: BSD-3-Clause
- * \copyright
- * Copyright (c) 2021 - 2023 TQ-Systems GmbH <license@tq-group.com>,
+ * SPDX-License-Identifier: Apache 2.0
+ * Copyright (c) 2025 TQ-Systems GmbH <oss@ew.tq-group.com>,
  * D-82229 Seefeld, Germany.
  * Author: Isaac L. L. Yuki
  */
-//******************************************************************************
 
 #include <stdint.h>
 
