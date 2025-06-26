@@ -1,6 +1,6 @@
 .. _tianma-tm070jvgh3:
 
-.. Copyright (c) 2019-2023 TQ-Systems GmbH <license@tq-group.com>
+.. Copyright (c) 2025 TQ-Systems GmbH <license@tq-group.com>
 .. SPDX-License-Identifier: CC-BY-4.0
 
 .. Author: Isaac L. L. Yuki
