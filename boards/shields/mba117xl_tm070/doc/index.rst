@@ -6,7 +6,7 @@
 .. D-82229 Seefeld, Germany.
 
 TQ-SYSTEMS USES TIANMA-TM070JVGH33-DISPLAY
-################################
+##########################################
 
 Overview
 ********
