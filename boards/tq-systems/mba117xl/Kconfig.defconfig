@@ -42,39 +42,18 @@ endif # NETWORKING
 if DISPLAY
 
 if SHIELD_RK055HDMIPI4MA0
-choice "Select Display RK055HDMIPI4MA0"
-    prompt "Select board display configuration"
-    default SHIELD_HX8394
-    config SHIELD_HX8394
-        bool "Shield Display (HX8394)"
-endchoice
 
 config HX8394
 	default y
-	depends on SHIELD_HX8394
-
-config INPUT
-    default y
-    depends on SHIELD_HX8394
-
-config INPUT_GT911
-    default y
-    depends on SHIELD_HX8394
-
-config INPUT_GT911_INTERRUPT
-    default y
-    depends on SHIELD_HX8394
+	select INPUT
+	select INPUT_GT911
+    select INPUT_GT911_INTERRUPT
 
 endif
 
-config DISPLAY_TM070
-	bool "Display_TM070"
-	default y
-	depends on !SHIELD_RK055HDMIPI4MA0
-
 config MIPI_DSI
     default y
-    depends on DISPLAY_TM070 || SHIELD_RK055HDMIPI4MA0
+    depends on SHIELD_MBA117XL_TM070 || SHIELD_RK055HDMIPI4MA0
 
 if LVGL
 
