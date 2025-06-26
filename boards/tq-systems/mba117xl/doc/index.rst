@@ -1,6 +1,6 @@
 ﻿.. zephyr:board:: mba117xl
 
-.. Copyright (c) 2019-2023 TQ-Systems GmbH <license@tq-group.com>
+.. Copyright (c) 2025 TQ-Systems GmbH <license@tq-group.com>
 .. SPDX-License-Identifier: CC-BY-4.0
 
 Overview
