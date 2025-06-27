@@ -116,11 +116,11 @@ uint32_t BOARD_PrepareDisplayController(void)
 		return -1;
 	}
 
-	// init seq 2: enable LP11 on inactive DSI lanes
+	/* init seq 2: enable LP11 on inactive DSI lanes */
 	DSI_HOST_DPHY_INTFC->AUTO_PD_EN = DSI_HOST_NXP_FDSOI28_DPHY_INTFC_AUTO_PD_EN_AUTO_PD_EN(0u);
 	DSI_HOST->CFG_NONCONTINUOUS_CLK = DSI_HOST_CFG_NONCONTINUOUS_CLK_CLK_MODE(0U);
 
-	// wait for it
+	/* wait for it */
 	k_sleep(K_MSEC(10));
 
 	status = SN65DSI83_WriteCSR(0x0Au, 0x05u);
