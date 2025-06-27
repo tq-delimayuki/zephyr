@@ -20,7 +20,7 @@
 #define FSL_XIP_BOARD_DRIVER_VERSION (MAKE_VERSION(2, 0, 1))
 
 /*
- * FLEXSPI memory config block related defintions
+ * FLEXSPI memory config block related definitions
  */
 #define FLEXSPI_CFG_BLK_TAG     (0x42464346UL)
 #define FLEXSPI_CFG_BLK_VERSION (0x56010400UL)
@@ -32,7 +32,7 @@
 #define FLEXSPI_FEATURE_HAS_PARALLEL_MODE 1
 
 /*
- * Lookup table related defintions
+ * Lookup table related definitions
  */
 #define CMD_INDEX_READ        0
 #define CMD_INDEX_READSTATUS  1
