@@ -34,8 +34,11 @@ const
 							kFlexSPIReadSampleClk_LoopbackFromDqsPad,
 						.csHoldTime = 3u,
 						.csSetupTime = 3u,
-						// Enable DDR mode, Wordaddassable, Safe
-						// configuration, Differential clock
+
+						/*
+						 * Enable DDR mode, Wordaddassable, Safe
+						 * configuration, Differential clock
+						 */
 						.controllerMiscOption = 0x110,
 						.deviceType = kFlexSpiDeviceType_SerialNOR,
 						.sflashPadType = kSerialFlash_4Pads,
@@ -43,7 +46,9 @@ const
 						.sflashA1Size = 32u * 1024u * 1024u,
 						.lookupTable =
 							{
-								// Read LUTs
+								/*
+								 * Read LUTs
+								 */
 								[0] = FLEXSPI_LUT_SEQ(
 									CMD_SDR, FLEXSPI_1PAD, 0x03,
 									RADDR_SDR, FLEXSPI_1PAD,
@@ -53,24 +58,32 @@ const
 									0x04, STOP, FLEXSPI_1PAD,
 									0x0),
 
-								// Read Status LUTs
+								/*
+								 * Read Status LUTs
+								 */
 								[4 * 1 + 0] = FLEXSPI_LUT_SEQ(
 									CMD_SDR, FLEXSPI_1PAD, 0x05,
 									READ_SDR, FLEXSPI_1PAD,
 									0x04),
 
-								// Write Enable LUTs
+								/*
+								 * Write Enable LUTs
+								 */
 								[4 * 3 + 0] = FLEXSPI_LUT_SEQ(
 									CMD_SDR, FLEXSPI_1PAD, 0x06,
 									STOP, FLEXSPI_1PAD, 0x0),
 
-								// Erase Sector LUTs
+								/*
+								 * Erase Sector LUTs
+								 */
 								[4 * 5 + 0] = FLEXSPI_LUT_SEQ(
 									CMD_SDR, FLEXSPI_1PAD, 0x20,
 									RADDR_SDR, FLEXSPI_1PAD,
 									0x18),
 
-								// Erase Block LUTs
+								/*
+								 * Erase Block LUTs
+								 */
 								[4 * 8 + 0] =
 									FLEXSPI_LUT_SEQ(CMD_SDR,
 											FLEXSPI_1PAD,
@@ -78,7 +91,9 @@ const
 											RADDR_SDR, FLEXSPI_1PAD,
 											0x18),
 
-								// Pape Program LUTs
+								/*
+								 * Pape Program LUTs
+								 */
 								[4 * 9 + 0] =
 									FLEXSPI_LUT_SEQ(CMD_SDR,
 											FLEXSPI_1PAD,
@@ -91,7 +106,9 @@ const
 											0x04,
 											STOP, FLEXSPI_1PAD, 0x0),
 
-								// Erase Chip LUTs
+								/*
+								 * Erase Chip LUTs
+								 */
 								[4 * 11 + 0] =
 									FLEXSPI_LUT_SEQ(CMD_SDR,
 											FLEXSPI_1PAD,

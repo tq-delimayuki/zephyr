@@ -69,7 +69,6 @@ static uint32_t PF5020_transfer(const void *peripheral, uint8_t regAddress, size
 void soc_late_init_hook(void)
 {
 	float voltage;
-
 	uint32_t sysClock = CLOCK_GetRootClockFreq(kCLOCK_Root_M7);
 
 	printk("\r\nCore Clock Frequency: %u Hz\r\n", sysClock);
@@ -81,7 +80,6 @@ void soc_late_init_hook(void)
 	PF5020_Handle_t PMIC = {.transfer = PF5020_transfer, .peripheral = i2c_dev};
 
 	PF5020_setCoreVoltage(PMIC_VDD_SOC_1V100, &PMIC);
-
 	PF5020_readCoreVoltage(&voltage, &PMIC);
 	printk("PMIC set to: %fV\r\n", (double)voltage);
 }
