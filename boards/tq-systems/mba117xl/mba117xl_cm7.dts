@@ -38,7 +38,7 @@
 		reg = <0x80000000 DT_SIZE_M(64)>;
 	};
 
-		/*
+	/*
 	 * This node describes the GPIO pins of the MIPI FPC interface,
 	 * J48 on the EVK. This interface is standard to several
 	 * NXP EVKs, and is used with several MIPI displays
