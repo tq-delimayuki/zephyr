@@ -325,22 +325,16 @@
 	pinmux_usdhc2: pinmux_usdhc2 {
 
 		group0 {
-
 			pinmux = <&iomuxc_gpio_sd_b2_00_usdhc2_data3>,
 				<&iomuxc_gpio_sd_b2_01_usdhc2_data2>,
 				<&iomuxc_gpio_sd_b2_02_usdhc2_data1>,
 				<&iomuxc_gpio_sd_b2_03_usdhc2_data0>;
-
 			bias-pull-down;
-
 		};
 
 		group1 {
-
 			pinmux = <&iomuxc_gpio_sd_b2_04_usdhc2_clk>;
-
 			bias-pull-up;
-
 		};
 
 	};
@@ -349,16 +343,11 @@
 	pinmux_usb1: pinmux_usb1 {
 
 		group0 {
-
 			pinmux = <&iomuxc_gpio_ad_11_usb_otg1_oc>,
 				<&iomuxc_gpio_ad_09_usbphy1_otg_id>;
-
 			drive-strength = "high";
-
 			bias-pull-down;
-
 			slew-rate = "fast";
-
 		};
 
 	};
@@ -367,17 +356,12 @@
 	pinmux_usb2: pinmux_usb2 {
 
 		group0 {
-
 			pinmux = <&iomuxc_gpio_ad_07_usb_otg2_pwr>,
 				<&iomuxc_gpio_ad_06_usb_otg2_oc>,
 				<&iomuxc_gpio_ad_08_usbphy2_otg_id>;
-
 			drive-strength = "high";
-
 			bias-pull-down;
-
 			slew-rate = "fast";
-
 		};
 
 	};
@@ -389,18 +373,13 @@
 	pinmux_enet_qos: pinmux_enet_qos {
 
 		group0 {
-
 			pinmux = <&iomuxc_gpio_disp_b2_05_enet_qos_tx_clk>,
 				<&iomuxc_gpio_disp_b1_01_enet_qos_rx_clk>;
 
 			bias-disable;
-
 			drive-strength = "high";
-
 			slew-rate = "fast";
-
 			input-enable;
-
 		};
 
 		group1 {
@@ -415,13 +394,9 @@
 				<&iomuxc_gpio_disp_b1_04_enet_qos_rdata02>,
 				<&iomuxc_gpio_disp_b1_05_enet_qos_rdata03>,
 				<&iomuxc_gpio_disp_b2_08_enet_rx_en>;
-
 			drive-strength = "high";
-
 			bias-pull-up;
-
 			slew-rate = "fast";
-
 		};
 
 		group2 {
@@ -436,15 +411,10 @@
 				<&iomuxc_gpio_disp_b1_07_enet_qos_tdata02>,
 				<&iomuxc_gpio_disp_b1_06_enet_qos_tdata03>,
 				<&iomuxc_gpio_disp_b2_04_enet_qos_tx_en>;
-
 			drive-strength = "high";
-
 			bias-pull-down;
-
 			slew-rate = "fast";
-
 			input-enable;
-
 		};
 
 	};
@@ -452,14 +422,10 @@
 	pinmux_enet_qos_mdio: pinmux_enet_qos_mdio {
 
 		group0 {
-
 			pinmux = <&iomuxc_gpio_emc_b2_19_enet_qos_mdc>,
 				<&iomuxc_gpio_ad_27_enet_qos_mdio>;
-
 			drive-strength = "high";
-
 			slew-rate = "fast";
-
 		};
 
 	};
@@ -470,24 +436,18 @@
 	pinmux_enet1g: pinmux_enet1g {
 
 		group0 {
-
 			/* ENET_RGMII_TXC */
 			/* ENET_RGMII_RXC */
 			pinmux = <&iomuxc_gpio_emc_b2_14_enet_1g_tx_clk_io>,
 				<&iomuxc_gpio_emc_b2_05_enet_1g_rx_clk>;
 
 			bias-disable;
-
 			drive-strength = "high";
-
 			slew-rate = "fast";
-
 			input-enable;
-
 		};
 
 		group1 {
-
 			/* ENET_RGMII_TXD0 */
 			/* ENET_RGMII_TXD1 */
 			/* ENET_RGMII_TXD2 */
@@ -500,11 +460,8 @@
 				<&iomuxc_gpio_emc_b2_13_enet_1g_tx_en>;
 
 			drive-strength = "high";
-
 			bias-pull-up;
-
 			slew-rate = "fast";
-
 		};
 
 		group2 {
@@ -535,44 +492,29 @@
 	pinmux_enet1g_mdio: pinmux_enet1g_mdio {
 
 		group0 {
-
 			/* ETHPHY_RST_B */
 			pinmux = <&iomuxc_gpio_disp_b2_13_gpio11_io14>;
-
 			drive-strength = "high";
-
 			bias-pull-down;
-
 			slew-rate = "slow";
-
 		};
 
 		group1 {
-
 			/* RGMII1_PHY_INTB */
 			pinmux = <&iomuxc_gpio_disp_b2_12_gpio_mux5_io13>;
-
 			drive-strength = "high";
-
 			bias-pull-down;
-
 			slew-rate = "fast";
-
 			input-enable;
-
 		};
 
 		group2 {
-
 			/* ENET_RGMII_MDC */
 			/* ENET_RGMII_MDIO */
 			pinmux = <&iomuxc_gpio_ad_16_enet_1g_mdc>,
 				<&iomuxc_gpio_emc_b2_20_enet_1g_mdio>;
-
 			drive-strength = "high";
-
 			bias-pull-down;
-
 			slew-rate = "fast";
 
 		};
@@ -581,3 +523,5 @@
 
 	pinmux_enet1g_ptp: pinmux_enet1g_ptp {
 	};
+
+};
