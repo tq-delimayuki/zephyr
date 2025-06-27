@@ -1,4 +1,4 @@
-/*!
+/*
  * Copyright (c) 2025 TQ-Systems GmbH <license@tq-group.com>
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -8,14 +8,18 @@
 #include <nxp/nxp_imx/rt/mimxrt1176dvmaa-pinctrl.dtsi>
 
 &pinctrl {
-	/* Configures pin routing and optionally pin electrical features. */
+	/*
+	 * Configures pin routing and optionally pin electrical features.
+	 */
 	board_initpins: board_initpins {
+
 		group0 {
 			pinmux = <&iomuxc_lpsr_gpio_lpsr_14_jtag_mux_tck>;
 			drive-strength = "high";
 			bias-pull-down;
 			slew-rate = "fast";
 		};
+
 		group1 {
 			pinmux = <&iomuxc_lpsr_gpio_lpsr_12_jtag_mux_tdi>,
 				<&iomuxc_lpsr_gpio_lpsr_15_jtag_mux_tms>,
@@ -25,6 +29,7 @@
 			bias-pull-up;
 			slew-rate = "fast";
 		};
+
 		group2 {
 			pinmux = <&iomuxc_lpsr_gpio_lpsr_13_jtag_mux_mod>,
 				<&iomuxc_lpsr_gpio_lpsr_11_jtag_mux_tdo>;
@@ -33,8 +38,11 @@
 		};
 	};
 
-	/* Configures pin routing and optionally pin electrical features for the LPUART1. */
+	/*
+	 * Configures pin routing and optionally pin electrical features for the LPUART1.
+	 */
 	pinmux_lpuart1: pinmux_lpuart1 {
+
 		group0 {
 			pinmux = <&iomuxc_gpio_ad_25_lpuart1_rx>,
 				<&iomuxc_gpio_ad_24_lpuart1_tx>;
@@ -44,8 +52,11 @@
 		};
 	};
 
-	/* Configures pin routing and optionally pin electrical features for LPI2C6. */
+	/*
+	 * Configures pin routing and optionally pin electrical features for LPI2C6.
+	 */
 	pinmux_lpi2c6: pinmux_lpi2c6 {
+
 		group0 {
 			pinmux = <&iomuxc_lpsr_gpio_lpsr_07_lpi2c6_scl>,
 				<&iomuxc_lpsr_gpio_lpsr_06_lpi2c6_sda>;
@@ -55,8 +66,11 @@
 		};
 	};
 
-	/* Configures pin routing and optionally pin electrical features for LPI2C5. */
+	/*
+	 * Configures pin routing and optionally pin electrical features for LPI2C5.
+	 */
 	pinmux_lpi2c5: pinmux_lpi2c5 {
+
 		group0 {
 			pinmux = <&iomuxc_lpsr_gpio_lpsr_05_lpi2c5_scl>,
 				<&iomuxc_lpsr_gpio_lpsr_04_lpi2c5_sda>;
@@ -67,8 +81,11 @@
 		};
 	};
 
-	/* Configures pin routing and optionally pin electrical features for LPI2C3. */
+	/*
+	 * Configures pin routing and optionally pin electrical features for LPI2C3.
+	 */
 	pinmux_lpi2c3: pinmux_lpi2c3 {
+
 		group0 {
 			pinmux = <&iomuxc_gpio_disp_b2_10_lpi2c3_scl>,
 				<&iomuxc_gpio_disp_b2_11_lpi2c3_sda>;
@@ -79,13 +96,17 @@
 		};
 	};
 
-	/* Configures pin routing and optionally pin electrical features for LPSPI1. */
+	/*
+	 * Configures pin routing and optionally pin electrical features for LPSPI1.
+	 */
 	pinmux_lpspi1: pinmux_lpspi1 {
+
 		group0 {
 			pinmux = <&iomuxc_gpio_emc_b2_00_lpspi1_sck>,
 				<&iomuxc_gpio_emc_b2_01_lpspi1_pcs0>;
 			bias-pull-down;
 		};
+
 		group1 {
 			pinmux = <&iomuxc_gpio_ad_30_lpspi1_sdo>,
 				<&iomuxc_gpio_ad_31_lpspi1_sdi>;
@@ -95,8 +116,11 @@
 		};
 	};
 
-	/* Configures pin routing and optionally pin electrical features for LPSPI4. */
+	/*
+	 * Configures pin routing and optionally pin electrical features for LPSPI4.
+	 */
 	pinmux_lpspi4: pinmux_lpspi4 {
+
 		group0 {
 			pinmux = <&iomuxc_gpio_disp_b2_12_lpspi4_sck>,
 				<&iomuxc_gpio_disp_b2_13_lpspi4_sdi>,
@@ -105,6 +129,7 @@
 			bias-pull-down;
 			slew-rate = "fast";
 		};
+
 		group1 {
 			pinmux = <&iomuxc_gpio_disp_b2_15_lpspi4_pcs0>;
 			drive-strength = "high";
@@ -113,8 +138,11 @@
 		};
 	};
 
-	/* Configures pin routing and optionally pin electrical features for LPUART11. */
+	/*
+	 * Configures pin routing and optionally pin electrical features for LPUART11.
+	 */
 	pinmux_lpuart11: pinmux_lpuart11 {
+
 		group0 {
 			pinmux = <&iomuxc_lpsr_gpio_lpsr_08_lpuart11_tx>,
 				<&iomuxc_lpsr_gpio_lpsr_09_lpuart11_rx>;
@@ -123,8 +151,11 @@
 		};
 	};
 
-	/* Configures pin routing and optionally pin electrical features for LPUART6. */
+	/*
+	 * Configures pin routing and optionally pin electrical features for LPUART6.
+	 */
 	pinmux_lpuart6: pinmux_lpuart6 {
+
 		group0 {
 			pinmux = <&iomuxc_gpio_emc_b1_41_lpuart6_rx>,
 				<&iomuxc_gpio_emc_b1_40_lpuart6_tx>;
@@ -132,8 +163,11 @@
 		};
 	};
 
-	/* Configures pin routing and optionally pin electrical features for LPUART8. */
+	/*
+	 * Configures pin routing and optionally pin electrical features for LPUART8.
+	 */
 	pinmux_lpuart8: pinmux_lpuart8 {
+
 		group0 {
 			pinmux = <&iomuxc_gpio_ad_02_lpuart8_tx>,
 				<&iomuxc_gpio_ad_03_lpuart8_rx>;
@@ -143,8 +177,11 @@
 		};
 	};
 
-	/* Configures pin routing and optionally pin electrical features for the FLEXCAN2. */
+	/*
+	 * Configures pin routing and optionally pin electrical features for the FLEXCAN2.
+	 */
 	pinmux_flexcan2: pinmux_flexcan2 {
+
 		group0 {
 			pinmux = <&iomuxc_gpio_ad_01_can2_rx>,
 				<&iomuxc_gpio_ad_00_can2_tx>;
@@ -154,8 +191,11 @@
 		};
 	};
 
-	/* Configures pin routing and optionally pin electrical features for the FLEXCAN3. */
+	/*
+	 * Configures pin routing and optionally pin electrical features for the FLEXCAN3.
+	 */
 	pinmux_flexcan3: pinmux_flexcan3 {
+
 		group0 {
 			pinmux = <&iomuxc_lpsr_gpio_lpsr_01_can3_rx>,
 				<&iomuxc_lpsr_gpio_lpsr_00_can3_tx>;
@@ -164,12 +204,16 @@
 		};
 	};
 
-	/* Configures pin routing and optionally pin electrical features for the FLEXSPI1. */
+	/*
+	 * Configures pin routing and optionally pin electrical features for the FLEXSPI1.
+	 */
 	pinmux_flexspi1: pinmux_flexspi1 {
+
 		group0 {
 			pinmux = <&iomuxc_gpio_sd_b2_05_flexspi1_a_dqs>;
 			bias-pull-up;
 		};
+
 		group1 {
 			pinmux = <&iomuxc_gpio_ad_20_flexspi1_a_data00>,
 				<&iomuxc_gpio_ad_21_flexspi1_a_data01>,
@@ -180,6 +224,7 @@
 			bias-pull-down;
 			slew-rate = "fast";
 		};
+
 		group2 {
 			pinmux = <&iomuxc_gpio_ad_18_flexspi1_a_ss0_b>;
 			drive-strength = "high";
@@ -188,8 +233,11 @@
 		};
 	};
 
-	/* Configures pin routing and optionally pin electrical features for PWM2. */
+	/*
+	 * Configures pin routing and optionally pin electrical features for PWM2.
+	 */
 	pinmux_pwm2_pwm2: pinmux_pwm2_pwm2 {
+
 		group0 {
 			pinmux = <&iomuxc_gpio_ad_28_flexpwm2_pwm2_a>;
 			drive-strength = "high";
@@ -197,8 +245,11 @@
 		};
 	};
 
-	/* Configures pin routing and optionally pin electrical features for SEMC. */
+	/*
+	 * Configures pin routing and optionally pin electrical features for SEMC.
+	 */
 	pinmux_semc: pinmux_semc {
+
 		group0 {
 			pinmux = <&iomuxc_gpio_emc_b1_28_semc_we>,
 				<&iomuxc_gpio_emc_b1_25_semc_ras>,
@@ -243,13 +294,17 @@
 		};
 	};
 
-	/* Configures pin routing and optionally pin electrical features for USDHC1. */
+	/*
+	 * Configures pin routing and optionally pin electrical features for USDHC1.
+	 */
 	pinmux_usdhc1: pinmux_usdhc1 {
+
 		group0 {
 			pinmux = <&iomuxc_gpio_sd_b1_05_usdhc1_data3>,
 				<&iomuxc_gpio_sd_b1_01_usdhc1_clk>;
 			bias-pull-down;
 		};
+
 		group1 {
 			pinmux = <&iomuxc_gpio_sd_b1_04_usdhc1_data2>,
 				<&iomuxc_gpio_sd_b1_03_usdhc1_data1>,
@@ -257,6 +312,7 @@
 				<&iomuxc_gpio_sd_b1_00_usdhc1_cmd>;
 			bias-pull-up;
 		};
+
 		group2 {
 			pinmux = <&iomuxc_gpio_ad_34_usdhc1_vselect>;
 			drive-strength = "high";
@@ -265,146 +321,263 @@
 		};
 	};
 
-	/* Configures pin routing and optionally pin electrical features for USDHC2. */
+/* Configures pin routing and optionally pin electrical features for USDHC2. */
 	pinmux_usdhc2: pinmux_usdhc2 {
+
 		group0 {
+
 			pinmux = <&iomuxc_gpio_sd_b2_00_usdhc2_data3>,
 				<&iomuxc_gpio_sd_b2_01_usdhc2_data2>,
 				<&iomuxc_gpio_sd_b2_02_usdhc2_data1>,
 				<&iomuxc_gpio_sd_b2_03_usdhc2_data0>;
+
 			bias-pull-down;
+
 		};
+
 		group1 {
+
 			pinmux = <&iomuxc_gpio_sd_b2_04_usdhc2_clk>;
+
 			bias-pull-up;
+
 		};
+
 	};
 
-	/* Configures pin routing and optionally pin electrical features for USB1. */
+/* Configures pin routing and optionally pin electrical features for USB1. */
 	pinmux_usb1: pinmux_usb1 {
+
 		group0 {
+
 			pinmux = <&iomuxc_gpio_ad_11_usb_otg1_oc>,
 				<&iomuxc_gpio_ad_09_usbphy1_otg_id>;
+
 			drive-strength = "high";
+
 			bias-pull-down;
+
 			slew-rate = "fast";
+
 		};
+
 	};
 
-	/* Configures pin routing and optionally pin electrical features for USB2. */
+/* Configures pin routing and optionally pin electrical features for USB2. */
 	pinmux_usb2: pinmux_usb2 {
+
 		group0 {
+
 			pinmux = <&iomuxc_gpio_ad_07_usb_otg2_pwr>,
 				<&iomuxc_gpio_ad_06_usb_otg2_oc>,
 				<&iomuxc_gpio_ad_08_usbphy2_otg_id>;
+
 			drive-strength = "high";
+
 			bias-pull-down;
+
 			slew-rate = "fast";
+
 		};
+
 	};
 
-	pinmux_lcdif: pinmux_lcdif {};
+	pinmux_lcdif: pinmux_lcdif {
+	};
 
-		pinmux_enet_qos: pinmux_enet_qos {
+/* Configures pin routing for ENET_QOS */
+	pinmux_enet_qos: pinmux_enet_qos {
+
 		group0 {
+
 			pinmux = <&iomuxc_gpio_disp_b2_05_enet_qos_tx_clk>,
 				<&iomuxc_gpio_disp_b1_01_enet_qos_rx_clk>;
+
 			bias-disable;
+
 			drive-strength = "high";
+
 			slew-rate = "fast";
+
 			input-enable;
+
 		};
+
 		group1 {
-			pinmux = <&iomuxc_gpio_disp_b2_06_enet_qos_rdata00>,	// ENET_RGMII_RXD0
-				<&iomuxc_gpio_disp_b2_07_enet_qos_rdata01>,			// ENET_RGMII_RXD1
-				<&iomuxc_gpio_disp_b1_04_enet_qos_rdata02>,			// ENET_RGMII_RXD2
-				<&iomuxc_gpio_disp_b1_05_enet_qos_rdata03>,			// ENET_RGMII_RXD3
-				<&iomuxc_gpio_disp_b2_08_enet_rx_en>;			// ENET_RGMII_RX_EN
+
+			/* ENET_RGMII_RXD0 */
+			/* ENET_RGMII_RXD1 */
+			/* ENET_RGMII_RXD2 */
+			/* ENET_RGMII_RXD3 */
+			/* ENET_RGMII_RX_EN */
+			pinmux = <&iomuxc_gpio_disp_b2_06_enet_qos_rdata00>,
+				<&iomuxc_gpio_disp_b2_07_enet_qos_rdata01>,
+				<&iomuxc_gpio_disp_b1_04_enet_qos_rdata02>,
+				<&iomuxc_gpio_disp_b1_05_enet_qos_rdata03>,
+				<&iomuxc_gpio_disp_b2_08_enet_rx_en>;
+
 			drive-strength = "high";
+
 			bias-pull-up;
+
 			slew-rate = "fast";
+
 		};
+
 		group2 {
-			pinmux = <&iomuxc_gpio_disp_b2_02_enet_qos_tdata00>, 	// ENET_RGMII_TXD0
-				<&iomuxc_gpio_disp_b2_03_enet_qos_tdata01>,    		// ENET_RGMII_TXD1
-				<&iomuxc_gpio_disp_b1_07_enet_qos_tdata02>,			// ENET_RGMII_TXD2
-				<&iomuxc_gpio_disp_b1_06_enet_qos_tdata03>,			// ENET_RGMII_TXD3
-				<&iomuxc_gpio_disp_b2_04_enet_qos_tx_en>;			// ENET_RGMII_TX_EN
+
+			/* ENET_RGMII_TXD0 */
+			/* ENET_RGMII_TXD1 */
+			/* ENET_RGMII_TXD2 */
+			/* ENET_RGMII_TXD3 */
+			/* ENET_RGMII_TX_EN */
+			pinmux = <&iomuxc_gpio_disp_b2_02_enet_qos_tdata00>,
+				<&iomuxc_gpio_disp_b2_03_enet_qos_tdata01>,
+				<&iomuxc_gpio_disp_b1_07_enet_qos_tdata02>,
+				<&iomuxc_gpio_disp_b1_06_enet_qos_tdata03>,
+				<&iomuxc_gpio_disp_b2_04_enet_qos_tx_en>;
+
 			drive-strength = "high";
+
 			bias-pull-down;
+
 			slew-rate = "fast";
+
 			input-enable;
+
 		};
+
 	};
 
 	pinmux_enet_qos_mdio: pinmux_enet_qos_mdio {
+
 		group0 {
+
 			pinmux = <&iomuxc_gpio_emc_b2_19_enet_qos_mdc>,
 				<&iomuxc_gpio_ad_27_enet_qos_mdio>;
+
 			drive-strength = "high";
+
 			slew-rate = "fast";
+
 		};
+
 	};
 
 	pinmux_enet_qos_ptp: pinmux_ptp {
 	};
 
 	pinmux_enet1g: pinmux_enet1g {
+
 		group0 {
-			pinmux = <&iomuxc_gpio_emc_b2_14_enet_1g_tx_clk_io>,	// ENET_RGMII_TXC
-				<&iomuxc_gpio_emc_b2_05_enet_1g_rx_clk>;	// ENET_RGMII_RXC
+
+			/* ENET_RGMII_TXC */
+			/* ENET_RGMII_RXC */
+			pinmux = <&iomuxc_gpio_emc_b2_14_enet_1g_tx_clk_io>,
+				<&iomuxc_gpio_emc_b2_05_enet_1g_rx_clk>;
+
 			bias-disable;
+
 			drive-strength = "high";
+
 			slew-rate = "fast";
+
 			input-enable;
+
 		};
+
 		group1 {
-			pinmux = <&iomuxc_gpio_emc_b2_11_enet_1g_tdata00>,	// ENET_RGMII_TXD0
-				<&iomuxc_gpio_emc_b2_12_enet_1g_tdata01>,	// ENET_RGMII_TXD1
-				<&iomuxc_gpio_emc_b2_04_enet_1g_tdata02>,	// ENET_RGMII_TXD2
-				<&iomuxc_gpio_sd_b2_06_enet_1g_tdata03>,	// ENET_RGMII_TXD3
-				<&iomuxc_gpio_emc_b2_13_enet_1g_tx_en>;	// ENET_RGMII_TX_EN
+
+			/* ENET_RGMII_TXD0 */
+			/* ENET_RGMII_TXD1 */
+			/* ENET_RGMII_TXD2 */
+			/* ENET_RGMII_TXD3 */
+			/* ENET_RGMII_TX_EN */
+			pinmux = <&iomuxc_gpio_emc_b2_11_enet_1g_tdata00>,
+				<&iomuxc_gpio_emc_b2_12_enet_1g_tdata01>,
+				<&iomuxc_gpio_emc_b2_04_enet_1g_tdata02>,
+				<&iomuxc_gpio_sd_b2_06_enet_1g_tdata03>,
+				<&iomuxc_gpio_emc_b2_13_enet_1g_tx_en>;
+
 			drive-strength = "high";
+
 			bias-pull-up;
+
 			slew-rate = "fast";
+
 		};
+
 		group2 {
-			pinmux = <&iomuxc_gpio_emc_b2_15_enet_1g_rdata00>,	// ENET_RGMII_RXD0
-				<&iomuxc_gpio_emc_b2_16_enet_1g_rdata01>,	// ENET_RGMII_RXD1
-				<&iomuxc_gpio_emc_b2_08_enet_1g_rdata02>,	// ENET_RGMII_RXD2
-				<&iomuxc_gpio_emc_b2_07_enet_1g_rdata03>,	// ENET_RGMII_RXD3
-				<&iomuxc_gpio_emc_b2_17_enet_1g_rx_en>;	// ENET_RGMII_RX_EN
+
+			/* ENET_RGMII_RXD0 */
+			/* ENET_RGMII_RXD1 */
+			/* ENET_RGMII_RXD2 */
+			/* ENET_RGMII_RXD3 */
+			/* ENET_RGMII_RX_EN */
+			pinmux = <&iomuxc_gpio_emc_b2_15_enet_1g_rdata00>,
+				<&iomuxc_gpio_emc_b2_16_enet_1g_rdata01>,
+				<&iomuxc_gpio_emc_b2_08_enet_1g_rdata02>,
+				<&iomuxc_gpio_emc_b2_07_enet_1g_rdata03>,
+				<&iomuxc_gpio_emc_b2_17_enet_1g_rx_en>;
+
 			drive-strength = "high";
+
 			bias-pull-down;
+
 			slew-rate = "fast";
+
 			input-enable;
+
 		};
+
 	};
 
 	pinmux_enet1g_mdio: pinmux_enet1g_mdio {
+
 		group0 {
-			pinmux = <&iomuxc_gpio_disp_b2_13_gpio11_io14>;	// ETHPHY_RST_B
+
+			/* ETHPHY_RST_B */
+			pinmux = <&iomuxc_gpio_disp_b2_13_gpio11_io14>;
+
 			drive-strength = "high";
+
 			bias-pull-down;
+
 			slew-rate = "slow";
+
 		};
+
 		group1 {
-			pinmux = <&iomuxc_gpio_disp_b2_12_gpio_mux5_io13>;	// RGMII1_PHY_INTB
+
+			/* RGMII1_PHY_INTB */
+			pinmux = <&iomuxc_gpio_disp_b2_12_gpio_mux5_io13>;
+
 			drive-strength = "high";
+
 			bias-pull-down;
+
 			slew-rate = "fast";
+
 			input-enable;
+
 		};
+
 		group2 {
-			pinmux = <&iomuxc_gpio_ad_16_enet_1g_mdc>,	// ENET_RGMII_MDC
-				<&iomuxc_gpio_emc_b2_20_enet_1g_mdio>;		// ENET_RGMII_MDIO
+
+			/* ENET_RGMII_MDC */
+			/* ENET_RGMII_MDIO */
+			pinmux = <&iomuxc_gpio_ad_16_enet_1g_mdc>,
+				<&iomuxc_gpio_emc_b2_20_enet_1g_mdio>;
+
 			drive-strength = "high";
+
 			bias-pull-down;
+
 			slew-rate = "fast";
+
 		};
+
 	};
 
 	pinmux_enet1g_ptp: pinmux_enet1g_ptp {
 	};
-
-};
