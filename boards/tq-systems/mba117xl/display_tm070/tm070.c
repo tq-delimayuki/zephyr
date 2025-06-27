@@ -124,46 +124,46 @@ uint32_t BOARD_PrepareDisplayController(void)
 	k_sleep(K_MSEC(10));
 
 	status = SN65DSI83_WriteCSR(0x0Au, 0x05u);
-	status = SN65DSI83_WriteCSR(0x0Bu, 0x28u); // div= 6
-	status = SN65DSI83_WriteCSR(0x10u, 0x30u); // 2 lanes
-	status = SN65DSI83_WriteCSR(0x12u, 0x58u); // 88u == 440 - 445 MHz
+	status = SN65DSI83_WriteCSR(0x0Bu, 0x28u); /* div= 6 */
+	status = SN65DSI83_WriteCSR(0x10u, 0x30u); /* 2 lanes */
+	status = SN65DSI83_WriteCSR(0x12u, 0x58u); /* 88u == 440 - 445 MHz */
 	status = SN65DSI83_WriteCSR(0x18u, 0x7Au);
 
-	status = SN65DSI83_WriteCSR(0x20u, 0x00u); // CHA_ACTIVE_LINE_LENGTH_LOW
-	status = SN65DSI83_WriteCSR(0x21u, 0x05u); // CHA_ACTIVE_LINE_LENGTH_HIGH
-	status = SN65DSI83_WriteCSR(0x28u, 0x21u); // CHA_SYNC_DELAY_LOW
-	status = SN65DSI83_WriteCSR(0x29u, 0x00u); // CHA_SYNC_DELAY_HIGH
+	status = SN65DSI83_WriteCSR(0x20u, 0x00u); /* CHA_ACTIVE_LINE_LENGTH_LOW */
+	status = SN65DSI83_WriteCSR(0x21u, 0x05u); /* CHA_ACTIVE_LINE_LENGTH_HIGH */
+	status = SN65DSI83_WriteCSR(0x28u, 0x21u); /* CHA_SYNC_DELAY_LOW */
+	status = SN65DSI83_WriteCSR(0x29u, 0x00u); /* CHA_SYNC_DELAY_HIGH */
 
 #if (defined(TEST_MODE) && (TEST_MODE == 1))
-	status = SN65DSI83_WriteCSR(0x24u, 0x20u); // CHA_VERTICAL_DISPLAY_SIZE_LOW
-	status = SN65DSI83_WriteCSR(0x25u, 0x03u); // CHA_VERTICAL_DISPLAY_SIZE_HIGH
-	status = SN65DSI83_WriteCSR(0x2Cu, 0x01u); // CHA_HSYNC_PULSE_WIDTH_LOW
-	status = SN65DSI83_WriteCSR(0x2Du, 0x00u); // CHA_HSYNC_PULSE_WIDTH_HIGH
-	status = SN65DSI83_WriteCSR(0x30u, 0x01u); // CHA_VSYNC_PULSE_WIDTH_LOW
-	status = SN65DSI83_WriteCSR(0x31u, 0x00u); // CHA_VSYNC_PULSE_WIDTH_HIGH
-	status = SN65DSI83_WriteCSR(0x34u, 0x05u); // CHA_HORIZONTAL_BACK_PORCH
-	status = SN65DSI83_WriteCSR(0x36u, 0x02u); // CHA_VERTICAL_BACK_PORCH
-	status = SN65DSI83_WriteCSR(0x38u, 0x40u); // CHA_HORIZONTAL_FRONT_PORCH
-	status = SN65DSI83_WriteCSR(0x3Au, 0x02u); // CHA_VERTICAL_FRONT_PORCH
-	status = SN65DSI83_WriteCSR(0x3Cu, 0x10u); // test mode
+	status = SN65DSI83_WriteCSR(0x24u, 0x20u); /* CHA_VERTICAL_DISPLAY_SIZE_LOW */
+	status = SN65DSI83_WriteCSR(0x25u, 0x03u); /* CHA_VERTICAL_DISPLAY_SIZE_HIGH */
+	status = SN65DSI83_WriteCSR(0x2Cu, 0x01u); /* CHA_HSYNC_PULSE_WIDTH_LOW */
+	status = SN65DSI83_WriteCSR(0x2Du, 0x00u); /* CHA_HSYNC_PULSE_WIDTH_HIGH */
+	status = SN65DSI83_WriteCSR(0x30u, 0x01u); /* CHA_VSYNC_PULSE_WIDTH_LOW */
+	status = SN65DSI83_WriteCSR(0x31u, 0x00u); /* CHA_VSYNC_PULSE_WIDTH_HIGH */
+	status = SN65DSI83_WriteCSR(0x34u, 0x05u); /* CHA_HORIZONTAL_BACK_PORCH */
+	status = SN65DSI83_WriteCSR(0x36u, 0x02u); /* CHA_VERTICAL_BACK_PORCH */
+	status = SN65DSI83_WriteCSR(0x38u, 0x40u); /* CHA_HORIZONTAL_FRONT_PORCH */
+	status = SN65DSI83_WriteCSR(0x3Au, 0x02u); /* CHA_VERTICAL_FRONT_PORCH */
+	status = SN65DSI83_WriteCSR(0x3Cu, 0x10u); /* test mode */
 #endif
 
 	k_sleep(K_MSEC(3));
-	// init seq 6: set PLL_EN bit in CSR
+	/* init seq 6: set PLL_EN bit in CSR */
 	SN65DSI83_WriteCSR(0x0Du, 0x01u);
-	// wait for it
+	/* wait for it */
 	k_sleep(K_MSEC(10));
-	// init seq 7: set SOFT_RESET bit in CSR
+	/* init seq 7: set SOFT_RESET bit in CSR */
 	SN65DSI83_WriteCSR(0x09u, 0x01u);
-	// wait for it
+	/* wait for it */
 	k_sleep(K_MSEC(10));
-	// init seq 8: change DSI data lanes to HS and start video stream
-	// init seq 9: overstept
-	// init seq 10: clear all errors in CSR
-	status = (status_t)SN65DSI83_WriteCSR(0xE5u, 0xFFu);
-	// wait for it
+	/* init seq 8: change DSI data lanes to HS and start video stream */
+	/* init seq 9: overstept */
+	/* init seq 10: clear all errors in CSR */
+	status = SN65DSI83_WriteCSR(0xE5u, 0xFFu);
+	/* wait for it */
 	k_sleep(K_MSEC(1));
-	// init seq 11: verify no error in CSR
+	/* init seq 11: verify no error in CSR */
 	status = BOARD_ReadBridgeStatus();
 
 	return status;

@@ -66,11 +66,12 @@ static uint32_t PF5020_transfer(const void *peripheral, uint8_t regAddress, size
  * \brief  This is the main application entry point where system is
  * initialized and all system components are started.
  */
-void soc_late_init_hook()
+void soc_late_init_hook(void)
 {
 	float voltage;
 
 	uint32_t sysClock = CLOCK_GetRootClockFreq(kCLOCK_Root_M7);
+
 	printk("\r\nCore Clock Frequency: %u Hz\r\n", sysClock);
 	sysClock = CLOCK_GetRootClockFreq(kCLOCK_Root_Semc);
 	printk("SEMC Clock Frequency: %u Hz\r\n", sysClock);
@@ -85,7 +86,7 @@ void soc_late_init_hook()
 	printk("PMIC set to: %fV\r\n", (double)voltage);
 }
 
-void board_late_init_hook()
+void board_late_init_hook(void)
 {
 #if (defined(DISPLAY_TM070) && (DISPLAY_TM070 == 1))
 
