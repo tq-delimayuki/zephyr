@@ -1,4 +1,4 @@
-/*!
+/*
  * Copyright (c) 2025 TQ-Systems GmbH <license@tq-group.com>
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -25,7 +25,9 @@
  * Definitions
  ******************************************************************************/
 
-/* Check if devicetree node identifier is defined */
+/*
+ * Check if devicetree node identifier is defined
+ */
 #if DT_NODE_HAS_STATUS(DT_ALIAS(i2c_peripheral_6), okay)
 #define I2C_NODE DT_ALIAS(i2c_peripheral_6)
 #else
@@ -62,7 +64,7 @@ static uint32_t PF5020_transfer(const void *peripheral, uint8_t regAddress, size
  * Code
  ******************************************************************************/
 
-/*!
+/*
  * \brief  This is the main application entry point where system is
  * initialized and all system components are started.
  */
@@ -89,11 +91,14 @@ void board_late_init_hook(void)
 #if (defined(DISPLAY_TM070) && (DISPLAY_TM070 == 1))
 
 	const struct device *pwm_dev = DEVICE_DT_GET(PWM_NODE);
+
 	if (!pwm_dev) {
 		printk("Error: PWM device not found.\n");
 		return;
 	}
+
 	int ret = pwm_set(pwm_dev, PWM_CHANNEL, PWM_PERIOD, PWM_PERIOD, PWM_POLARITY_NORMAL);
+
 	if (ret) {
 		printk("Error %d: failed to set PWM\n", ret);
 	}
@@ -104,7 +109,7 @@ void board_late_init_hook(void)
 #endif
 }
 
-/*!
+/*
  * \brief This is the transfer function that is used by the driver.
  * \note Parameters are described in the drivers function.
  */
@@ -113,7 +118,9 @@ static uint32_t PF5020_transfer(const void *peripheral, uint8_t regAddress, size
 				PF5020_TransferDirection_t transferDirection)
 {
 	status_t status = kStatus_NoTransferInProgress;
+
 	struct i2c_msg msg;
+
 	switch (transferDirection) {
 	case PF5020_READ:
 		msg.flags = I2C_MSG_WRITE;
@@ -125,9 +132,11 @@ static uint32_t PF5020_transfer(const void *peripheral, uint8_t regAddress, size
 		msg.flags = I2C_MSG_READ | I2C_MSG_STOP;
 		status = i2c_transfer(peripheral, &msg, 1, PF5020_ADDRESS);
 		break;
+
 	case PF5020_WRITE:
 		status = i2c_burst_write(peripheral, PF5020_ADDRESS, regAddress, buffer, dataSize);
 		break;
+
 	default:
 		status = 1;
 	}

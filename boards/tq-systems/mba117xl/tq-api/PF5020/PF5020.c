@@ -132,6 +132,7 @@ uint32_t PF5020_readCoreVoltage(float *voltage, PF5020_Handle_t *handle)
 uint32_t PF5020_readDeviceID(uint8_t *deviceId, PF5020_Handle_t *handle)
 {
 	uint32_t status;
+
 	status = handle->transfer(handle->peripheral, PMIC_DEVICE_ID_ADDRESS, PMIC_REG_ADDRESS_SIZE,
 				  deviceId, PMIC_REG_DATA_SIZE, PF5020_READ);
 

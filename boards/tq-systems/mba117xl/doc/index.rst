@@ -200,10 +200,34 @@ Setting Fuses
 
 Set the fuses before the first boot.
 
-- **S3:** Off Off Off Off
-- **S4:** Off Off Off Off
-- **S5:** Off Off Off Off
-- **S6:** **On** Off On On
+.. list-table::
+   :header-rows: 1
+
+   * - Switch
+     - Position 1
+     - Position 2
+     - Position 3
+     - Position 4
+   * - **S3**
+     - Off
+     - Off
+     - Off
+     - Off
+   * - **S4**
+     - Off
+     - Off
+     - Off
+     - Off
+   * - **S5**
+     - Off
+     - Off
+     - Off
+     - Off
+   * - **S6**
+     - **On**
+     - Off
+     - On
+     - On
 
 1. Power off the board and set the DIP switches as above.
 2. Connect **UART1** to the host PC.
