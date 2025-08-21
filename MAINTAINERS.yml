@@ -4671,6 +4671,23 @@ TI SimpleLink Platforms:
   labels:
     - "platform: TI SimpleLink"
 
+TQ-Systems Platforms:
+  status: maintained
+  maintainers:
+    - tq-ansarim
+  collaborators:
+    - tq-roemerleonhard
+    - tq-delimayuki
+    - merchelmtq
+    - tq-kuerthm
+  files:
+    - boards/tq/*
+    - boards/shields/tqmba117xl_tm070/*
+    - boards/shields/rk055hdmipi4ma0/boards/tqmba117xl_cm7.overlay
+    - samples/*/*/boards/tq*.conf
+  labels:
+    - "platform: TQ-Systems"
+
 Task Watchdog:
   status: maintained
   maintainers:
