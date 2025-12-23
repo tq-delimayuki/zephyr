@@ -1,0 +1,22 @@
+/*
+ * Copyright (c) 2025 TQ-Systems GmbH <license@tq-group.com>, D-82229 Seefeld, Germany.
+ * Author: Isaac L. L. Yuki
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/ {
+	soc {
+		/delete-node/ ethernet@40424000;
+	};
+};
+
+&enet1g {
+	status = "okay";
+};
+
+&pinctrl {
+	/delete-node/ pinmux_enet_qos;
+	/delete-node/ pinmux_enet_qos_mdio;
+	/delete-node/ pinmux_qos_ptp;
+};
